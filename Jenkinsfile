@@ -54,6 +54,7 @@ pipeline {
                 sh "rm setup/*.jtl || true"
 
                 sh """\
+                    jmeter \
                     --nongui \
                     --testfile "setup/MassModification.jmx" \
                     --logfile "setup/MassModification.jtl" \
