@@ -52,6 +52,7 @@ pipeline {
                     --logfile "setup/MassModification.jtl" \
                 """.replaceAll( ' +', ' ' )
 
+                /*
                 sh "rm ${test_application.toLowerCase()}/*.jtl || true"
 
                 sh """\
@@ -77,6 +78,7 @@ pipeline {
 
                 // todo zip up jtl files, they are too big for slow internets
                 archiveArtifacts "${test_application.toLowerCase()}/*.jtl"
+                */
                 archiveArtifacts 'setup/*.jtl'
             }
         }
